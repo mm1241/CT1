@@ -1,53 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <math.h>
-
-
 int main()
 {
-  float v1;
-  float v2;
-  char operator;
-  float answer;
-
-  printf("Enter calculation:\n\n");
-  scanf("%c",&operator);
-
-  switch(operator)
+    int rollno,std,m1,m2,m3,m4,m5,tot,avg;
+    char name[20];
+    printf ("enter your rollno::");
+    scanf ("%d",&rollno);
+    printf ("enter your name::");
+    scanf ("%c",&name);
+    printf ("enter your standard::");
+    scanf ("%d",&std);
+    printf ("enter maths marks::");
+    scanf ("%d",&m1);
+    printf ("enter science marks::");
+    scanf ("%d",&m2);
+    printf ("enter english marks::");
+    scanf ("%d",&m3);
+    printf ("enter hindi marks::");
+    scanf ("%d",&m4);
+    printf ("enter computer marks::");
+    scanf ("%d",&m5);
+    tot = m1+m2+m3+m4+m5;
+    avg = tot/5;
+    printf (" total of 5 subjects::%d",tot);
+    printf ("\n avg is::%d",avg);
+    if(m1>=40&&m2>=40&&m3>=40&&m4>=40&&m5>=40)
     {
-        
-    case '/':
-    scanf("%f %f", &v1,& v2);
-    answer = v2/v1;
-printf("%.9f",answer);
-      break;
-    case '*':
-     scanf("%f %f", &v1,& v2);
-     answer = v1*v2;
-printf("%.9f",answer);
-      break;
-    case '+':
-    scanf("%f %f", &v1,& v2);
-    answer = v1+v2;
-printf("%.9f",answer);
-      break;
-    case '-':
-    scanf("%f %f", &v1,& v2);
-    answer = v1-v2;
-printf("%.9f",answer);
-      break;
-    case '^':
-    scanf("%f %f", &v1,& v2);
-    answer = pow(v1,v2);
-printf("%.9f",answer);
-      break;
-    case 'r': answer = sqrt(v2);
-printf("%.9f",answer);
-      break;
-   default :
-printf("enter correct operator");
+        if(avg>=90)
+        {
+        printf("\n grade A");
+        }
+        else if(avg>=80&&avg<90)
+        {
+        printf("\n grade B");
+        }
+        else if(avg>=70&&avg<80)
+        {
+        printf("\n grade C");
+        }
+        else if(avg>=60&&avg<70)
+        {
+        printf("\n grade D");
+        }
+        else if(avg>=40&&avg<60)
+        {
+        printf("\n grade E");
+        }
+        else
+        {
+        printf("\n fail");
+        }
+        return 0;
     }
-  
-  return 0;
 }
